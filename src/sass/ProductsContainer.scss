@@ -1,0 +1,81 @@
+@use 'variables' as v;
+
+.products{
+    display: grid;
+    grid-template-columns: repeat(10,1fr);
+    grid-template-rows: repeat(5,1fr);
+    position: relative;
+    height: 700px;
+    &__background-container{
+        grid-column: 1/-1;
+        grid-row: 1/2;
+        height: 100%;
+        overflow: hidden;
+        z-index: -1;
+    }
+    &__background{
+        width: 100%;
+        opacity: .5;
+        z-index: -1;
+    }
+    &__logo{
+        grid-column: 1/-1;
+        grid-row: 1/2;
+        margin: auto;
+        width: 90px;
+    }
+    &__section-container{
+        grid-column: 1/-1;
+        grid-row: 2/-1;
+        display: grid;
+        grid-template-columns: repeat(8,1fr);
+        grid-template-rows: repeat(10, 1fr);
+        min-height: fit-content;
+    }
+    &__line{
+        background-color: v.$Yellow;
+        grid-column: 1/-1;
+        grid-row: 1/2; 
+    }
+    &__types{
+        grid-column: 1/3;
+        grid-row: 2/-1;
+        background-color: v.$Yellow;
+        display: flex;
+        flex-direction: column;
+        padding: 8px;
+        font-family: v.$font1;
+        color: v.$Gray;
+    }
+    &__subtitle{
+        color: v.$Black;
+    }
+    &__container{
+        background-color: v.$White;
+        grid-column: 3/-1;
+        grid-row: 2/-1;
+        row-gap: 22px;
+        display: flex;
+        flex-wrap: wrap;
+        overflow-y: scroll;
+        padding: 12px 0;
+    }
+    &__subtitle{
+        text-align: center;
+        font-size: 22px;
+    }
+    &__type{
+        margin: 20px 0;
+        display: flex;
+        align-items: center;
+        & input{
+            margin-right: 8px;
+            width: 30px;
+            height: 30px;
+            cursor: pointer;
+        }
+    }
+    
+
+    
+}

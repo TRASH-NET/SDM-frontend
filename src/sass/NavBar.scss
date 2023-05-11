@@ -1,0 +1,52 @@
+@use 'variables' as v;
+
+.navBar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 6px;
+    background-color: v.$Yellow-soft;
+    &__container-house-icon{
+        font-size: 1.2em;
+        cursor: pointer;
+    }
+    &__house-icon{
+        font-size: 1.3em;
+    }
+    &__container-search{
+        background-color: v.$White;
+        padding: 8px;
+        width: 280px;
+        position: relative;
+        
+    }
+    &__search-input{
+        border: none;
+        outline: none;
+        width: 95%;
+        &::placeholder{
+            color: v.$Gray;
+            font-size: 1.1em;
+        }
+    }
+    &__search-icon{
+        position: absolute;
+        right: 2px;
+        cursor: pointer;
+    }
+    &__container-usercart-icon{
+        display: flex;
+        align-items: center;
+    }
+    &__user-icon, &__cart-icon{
+        font-size: 1.3em;
+        cursor: pointer;
+    }
+    &__line{
+        width: 1.4em;
+        height: 1px;
+        background-color: v.$Black;
+        transform: rotate(90deg);
+    }
+}

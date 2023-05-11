@@ -1,0 +1,30 @@
+@use 'variables' as v;
+
+.product{
+    background-color: v.$Gray-soft;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    justify-content: space-evenly;
+    padding: 10px;
+    width: 320px;
+    border-radius: 20px;
+    &__img{
+        width: 120px;
+    }
+    &__info-container{
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        font-family: v.$font1;
+        font-size: 13px;
+        color: v.$Gray-strong;
+        
+    }
+    &__name {
+        color: v.$Black;
+        font-size: 15px;
+        margin-bottom: 12px;
+    }
+}
