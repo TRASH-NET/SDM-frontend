@@ -1,4 +1,4 @@
-import '../sass/Product.scss';
+import '../../sass/Product.scss';
 
 export const Product = (prop) => {
     return( 
@@ -17,3 +17,4 @@ export const Product = (prop) => {
         </div>
     );
 };
+

@@ -1,0 +1,92 @@
+@use 'variables' as v;
+@use 'mixins';
+
+.home{
+    &__high-container{
+        position: relative;
+        display: flex;
+    }
+    &__background-container{
+        width: 100%;
+        position: absolute;
+        z-index: -1;
+    }
+    &__background1{
+        width: 100%;
+        position: absolute;
+        z-index: 4;
+    }
+    &__background2{
+        position: absolute;
+        width: 100%;
+        z-index: 3;
+        height: 635px;
+    }
+    &__background3{
+        position: absolute;
+        width: 100%;
+        z-index: 2;
+        height: 690px;
+    }
+    &__background4{
+        width: 100%;
+        opacity: .5;
+        z-index: -1;
+    }
+    &__img{
+        width: 400px;
+        margin-top: 70px;
+        margin-right: 10px;
+    }
+    &__info-container{
+       display: flex;
+       flex-direction: column;
+       padding: 130px 30px;
+       width: 600px;
+
+    }
+    &__title{
+        font-family: v.$font1;
+        font-size: 34px;
+        margin-left: 30px;
+        position: absolute;
+    }
+    &__info{
+        font-family: v.$font1;
+        margin-top: 40px;
+        margin-left: 30px;
+        margin-bottom: 10px;
+        width: 370px;
+        padding: 16px 0;
+        font-size: 21px;
+        font-weight: 700;
+        text-align: left;
+    }
+    &__ins-container{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    &__ins {
+        @include mixins.button(170px, 50px, v.$White, v.$font1, 20px, 400);
+    }
+    &__low-container{
+        margin-top: 100px;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        padding: 0 230px;
+    }
+    &__navigate{
+        @include mixins.button(200px, 50px, v.$White, v.$font1, 20px, 400);
+    }
+    &__logo-container{
+        display: flex;
+        justify-content: right;
+        
+    }
+    &__logo {
+        width: 60px;
+        margin-right: 20px;
+    }
+}

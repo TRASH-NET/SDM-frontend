@@ -1,11 +1,12 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {faCartShopping, faHouse, faSearch, faUser} from '@fortawesome/free-solid-svg-icons';
-import '../sass/NavBar.scss';
+import '../../sass/NavBar.scss';
 
 export const Navbar = () => {
+    
     return(<nav className='navBar'>
         <div className='navBar__container-house-icon'>
-            <FontAwesomeIcon icon={faHouse} className='navBar__house-icon'/>
+            <a href="#home" className='navBar__link-house-icon'><FontAwesomeIcon icon={faHouse} className='navBar__house-icon'/></a>
         </div>
         <div className='navBar__container-search'>
             <input type="text" placeholder='Title, author' className='navBar__search-input'/>
